@@ -1,0 +1,17 @@
+{
+  "name": "nodejs_microservices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "servers": "concurrently \"npm run users\"  \"npm run posts\"  \"npm run gateway\"",
+    "users": "npm start --prefix users",
+    "posts": "npm start --prefix posts",
+    "gateway": "npm start --prefix gateway",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
